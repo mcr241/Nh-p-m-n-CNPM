@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>AWEB_BTL</display-name>
+	<welcome-file-list>
+		<welcome-file>welcome</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>InitController</servlet-name>
+		<servlet-class>initWeb.InitController</servlet-class>
+
+	</servlet>
+
+	<listener>
+		<description>ServletContextListener</description>
+		<listener-class>initWeb.ServletContextListener</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>homePage</param-name>
+		<param-value>/index</param-value>
+	</context-param>
+
+
+	<servlet-mapping>
+		<servlet-name>InitController</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+
+</web-app>
